@@ -848,7 +848,6 @@ main {
   .site-footer { padding-left: 1.15rem; padding-right: 1.15rem; }
 
   .nav { padding: 0.9rem 1.15rem; }
-  .nav-social__extra { display: none; }
 
   .hero { padding-top: clamp(2.5rem, 12vw, 4rem); }
   .hero h1 { font-size: clamp(2.3rem, 9vw, 3rem); }
