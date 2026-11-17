@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilel Hadef — BI &amp; Analytics Consultant</title>
+  <meta name="description" content="Bilel Hadef — Business Intelligence & Analytics Consultant based in Herent, Belgium. Data platform governance, data warehousing, and Power BI reporting on the Microsoft stack." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Social sharing (LinkedIn, Slack, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bilel Hadef — BI &amp; Analytics Consultant" />
+  <meta property="og:description" content="Data platform governance, data warehousing, and analytics on the Microsoft stack." />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23047857'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Icon sprite: monochrome tech logos, recoloured via fill:currentColor -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-powerbi" viewBox="0 0 24 24"><path d="M4 13a1 1 0 0 1 1-1h1.6a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zm6.4-5a1 1 0 0 1 1-1H13a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-1.6a1 1 0 0 1-1-1zM16.8 3a1 1 0 0 1 1-1h1.6a1 1 0 0 1 1 1v17a1 1 0 0 1-1 1h-1.6a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-fabric" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="m6.194 9.3 13.9-2.013h.005a.77.77 0 0 0 .637-.564l1.235-3.749A.77.77 0 0 0 21.228 2l-.048.002-.049.003L8.257 3.838A3.46 3.46 0 0 0 5.468 6.34l-1.04 3.83c.16-.592.514-.654 1.766-.872Zm.255 1.528c-1.644.341-2.258.89-2.617 1.693q-.093.21-.168.447l-.86 3.186c.46-.257 1.056-.466 1.736-.577l.01-.001 9.255-1.358c.804-.132 1.021-.947 1.185-1.558l.814-3.223-9.081 1.343zM4.66 17.077c-1.779.289-2.362 1.465-2.502 1.824-.103.27-.159.565-.159.873 0 1.269.947 2.058 2.18 2.194q.516.077 1.18-.019l2.022-.28c.509-.07.924-.439 1.06-.933l1.28-4.401z"/></symbol>
+    <symbol id="i-azure" viewBox="0 0 24 24"><path d="M22.379 23.343a1.62 1.62 0 0 0 1.536-2.14v.002L17.35 1.76A1.62 1.62 0 0 0 15.816.657H8.184A1.62 1.62 0 0 0 6.65 1.76L.086 21.204a1.62 1.62 0 0 0 1.536 2.139h4.741a1.62 1.62 0 0 0 1.535-1.103l.977-2.892 4.947 3.675c.28.208.618.32.966.32m-3.084-12.531 3.624 10.739a.54.54 0 0 1-.51.713v-.001h-.03a.54.54 0 0 1-.322-.106l-9.287-6.9h4.853m6.313 7.006c.116-.326.13-.694.007-1.058L9.79 1.76a1.722 1.722 0 0 0-.007-.02h6.034a.54.54 0 0 1 .512.366l6.562 19.445a.54.54 0 0 1-.338.684"/></symbol>
+    <symbol id="i-python" viewBox="0 0 24 24"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></symbol>
+    <symbol id="i-sql" viewBox="0 0 24 24"><path d="M12 2c4.42 0 8 1.34 8 3v14c0 1.66-3.58 3-8 3s-8-1.34-8-3V5c0-1.66 3.58-3 8-3zm6 7.24c-1.53.86-3.79 1.26-6 1.26s-4.47-.4-6-1.26V12c0 .74 2.69 2 6 2s6-1.26 6-2zM6 5c0 .74 2.69 2 6 2s6-1.26 6-2-2.69-2-6-2-6 1.26-6 2zm0 9.74V17c0 .74 2.69 2 6 2s6-1.26 6-2v-2.26c-1.53.86-3.79 1.26-6 1.26s-4.47-.4-6-1.26z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M9.4 7.55 4.83 12l4.57 4.45-1.4 1.55L2 12l6-5.99zm5.2 0L20.6 12l-6 5.99-1.4-1.55L17.77 12 13.2 7.55z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M10.812 0c-.425.013-.845.215-1.196.605a3.593 3.593 0 00-.493.722c-.355.667-.425 1.415-.556 2.143a551.9 551.9 0 00-.726 4.087c-.027.16-.096.227-.244.273C5.83 8.386 4.06 8.94 2.3 9.514c-.387.125-.773.289-1.114.506-1.042.665-1.196 1.753-.415 2.71.346.422.79.715 1.284.936 1.1.49 2.202.976 3.3 1.47.019.01.036.013.053.019h-.004l1.306.535c0 .023.002.045 0 .073-.2 2.03-.39 4.063-.58 6.095-.04.419-.012.831.134 1.23.317.87 1.065 1.148 1.881.701.372-.204.666-.497.937-.818 1.372-1.623 2.746-3.244 4.113-4.872.111-.133.205-.15.363-.098.349.117.697.231 1.045.347h.001c.02.012.045.02.073.03l.142.042c1.248.416 2.68.775 3.929 1.19.4.132.622.164 1.045.098.311-.048.592-.062.828-.236.602-.33.995-.957.988-1.682-.005-.427-.154-.813-.35-1.186-.82-1.556-1.637-3.113-2.461-4.666-.078-.148-.076-.243.037-.375 1.381-1.615 2.756-3.236 4.133-4.855.272-.32.513-.658.653-1.058.308-.878-.09-1.57-1-1.741a2.783 2.783 0 00-1.235.069c-1.974.521-3.947 1.041-5.918 1.57-.175.047-.26.015-.355-.144a353.08 353.08 0 00-2.421-4.018 4.61 4.61 0 00-.652-.849c-.371-.37-.802-.549-1.227-.536zm.172 3.703a.592.592 0 01.189.211c.87 1.446 1.742 2.89 2.609 4.338.07.118.135.16.277.121 1.525-.41 3.052-.813 4.579-1.217.367-.098.735-.193 1.103-.289a.399.399 0 01-.1.2c-1.259 1.48-2.516 2.962-3.779 4.438-.11.13-.12.22-.04.37.937 1.803 1.768 3.309 2.498 4.76l-3.696-1.019c-.538-.18-1.077-.358-1.615-.539-.163-.055-.25-.03-.36.1-1.248 1.488-2.504 2.97-3.759 4.454a.398.398 0 01-.18.132c.035-.378.068-.757.104-1.136.149-1.572.297-3.144.451-4.716-.03-.318.117-.405-.322-.545-1.493-.593-3.346-1.321-4.816-1.905a.595.595 0 01.24-.134c1.797-.57 3.595-1.14 5.394-1.705.127-.04.199-.092.211-.233.013-.148.05-.294.076-.441.241-1.363.483-2.726.726-4.088.068-.386.14-.771.21-1.157z"/></symbol>
+    <symbol id="i-pandas" viewBox="0 0 24 24"><path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67zm0-11.187h2.623v5.446H8.67Z"/></symbol>
+    <symbol id="i-dbt" viewBox="0 0 24 24"><path d="M17.9004 9.3763a8.1488 8.1488 0 0 0-3.0421-3.1206l1.7708.8385a10.2874 10.2874 0 0 1 3.74 3.0007l3.234-5.9295a2.8546 2.8546 0 0 0-.0611-2.9604C22.7566.0371 21.2112-.3409 19.9754.3327l-5.8749 3.2101a4.3612 4.3612 0 0 1-4.1761 0L4.1769.408a2.8545 2.8545 0 0 0-2.9592.0632c-1.1673.7853-1.5452 2.33-.8723 3.5655L3.55 9.9106a4.3612 4.3612 0 0 1 0 4.1772l-3.1272 5.743a2.86 2.86 0 0 0 .085 2.9974c.794 1.1438 2.3225 1.5054 3.5448.8385l6.0581-3.3049a10.2877 10.2877 0 0 1-3.0051-3.7454l-.8374-1.7708a8.148 8.148 0 0 0 3.1206 3.0421l10.5832 5.779c1.2213.666 2.7481.3055 3.5426-.8363a2.8699 2.8699 0 0 0 .0796-3.0018L17.9004 9.3763zm3.3801-7.7351c.6022 0 1.0904.4882 1.0904 1.0904s-.4882 1.0904-1.0904 1.0904-1.0904-.4882-1.0904-1.0904.4882-1.0904 1.0904-1.0904zM2.7442 3.822c-.6022 0-1.0904-.4882-1.0904-1.0904s.4882-1.0904 1.0904-1.0904 1.0904.4882 1.0904 1.0904S3.3464 3.822 2.7442 3.822zm0 18.5363c-.6022 0-1.0904-.4882-1.0904-1.0904 0-.6022.4882-1.0904 1.0904-1.0904s1.0904.4882 1.0904 1.0904c0 .6022-.4882 1.0904-1.0904 1.0904zm10.3585-11.4489c-1.2008-.0035-2.177.9672-2.1805 2.1679a2.1738 2.1738 0 0 0 .7052 1.6091c-1.4872-.2091-2.5234-1.5843-2.3142-3.0716.2091-1.4872 1.5843-2.5234 3.0716-2.3142a2.7194 2.7194 0 0 1 2.3142 2.3142 2.1623 2.1623 0 0 0-1.5963-.7054zm8.1778 11.4489c-.6022 0-1.0904-.4882-1.0904-1.0904 0-.6022.4882-1.0904 1.0904-1.0904s1.0904.4882 1.0904 1.0904c0 .6022-.4882 1.0904-1.0904 1.0904z"/></symbol>
+    <symbol id="i-airflow" viewBox="0 0 24 24"><path d="M17.195 16.822l4.002-4.102C23.55 10.308 23.934 5.154 24 .43a.396.396 0 0 0-.246-.373.392.392 0 0 0-.437.09l-6.495 6.658-4.102-4.003C10.309.45 5.154.066.43 0H.423a.397.397 0 0 0-.277.683l6.658 6.494-4.003 4.103C.45 13.692.065 18.846 0 23.57a.398.398 0 0 0 .683.282l6.494-6.657 3.934 3.837.17.165c2.41 2.353 7.565 2.737 12.288 2.803h.006a.397.397 0 0 0 .277-.683l-6.657-6.495zm-.409-9.476c.04.115.05.24.031.344-.17.96-1.593 2.538-4.304 3.87a.597.597 0 0 0-.08-.079c1.432-3.155 1.828-5.61 1.175-7.322l3.058 2.984.12.203zm-.131 9.44a.73.73 0 0 1-.347.031c-.96-.171-2.537-1.594-3.87-4.307a.656.656 0 0 0 .08-.078l-.001.001c3.155 1.432 5.61 1.83 7.324 1.174l-2.969 3.043M23.568.392a.05.05 0 0 1 .052-.011c.018.006.03.024.029.043-.065 4.655-.437 9.726-2.703 12.05-1.53 1.565-4.326 1.419-8.283-.377.006-.037.021-.07.02-.108 0-.044-.017-.082-.026-.123 2.83-1.39 4.315-3.037 4.506-4.115.057-.322-.009-.542-.102-.688l6.507-6.67V.392zM.393.43A.045.045 0 0 1 .382.38C.39.36.403.343.425.35c4.655.065 9.727.438 12.05 2.703l.002.002c1.56 1.527 1.415 4.323-.379 8.28-.033-.005-.062-.02-.097-.02h-.008c-.045.001-.084.019-.126.027-1.39-2.83-3.037-4.314-4.115-4.506-.323-.057-.542.01-.688.103L.393.43zm11.94 11.563a.331.331 0 0 1-.327.335H12a.332.332 0 0 1-.004-.661c.172.016.333.144.335.326h.002zm-5.12 4.661a.722.722 0 0 1-.03-.345c.17-.96 1.595-2.54 4.309-3.873.013.016.019.035.033.05.013.012.03.017.044.028-1.434 3.158-1.83 5.613-1.177 7.326l-3.041-2.967m-.006-9.659a.735.735 0 0 1 .345-.031c.961.17 2.54 1.594 3.871 4.306a.597.597 0 0 0-.079.08c-2.167-.983-4.007-1.484-5.498-1.484-.68 0-1.289.103-1.825.308L7.128 7.35M.43 23.607c-.018.018-.038.015-.052.01-.019-.007-.028-.021-.028-.043.065-4.654.437-9.725 2.703-12.049 1.527-1.565 4.325-1.419 8.286.378-.006.035-.02.067-.02.104 0 .043.018.083.026.124-2.831 1.391-4.317 3.04-4.51 4.117-.057.322.01.542.103.688L.43 23.607zm23.144.042c-4.655-.065-9.726-.437-12.05-2.703l-.005-.006c-1.56-1.526-1.412-4.322.383-8.279.033.005.064.02.098.02h.009c.043 0 .08-.018.122-.027 1.39 2.832 3.036 4.317 4.115 4.51.083.014.16.021.23.021a.776.776 0 0 0 .45-.133l6.68 6.516c.02.02.016.04.01.052a.042.042 0 0 1-.042.029z"/></symbol>
+    <symbol id="i-terraform" viewBox="0 0 24 24"><path d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></symbol>
+    <symbol id="i-azuredevops" viewBox="0 0 24 24"><path d="M0 8.877L2.247 5.91l8.405-3.416V.022l7.37 5.393L2.966 8.338v8.225L0 15.707zm24-4.45v14.651l-5.753 4.9-9.303-3.057v3.056l-5.978-7.416 15.057 1.798V5.415z"/></symbol>
+    <symbol id="i-airbyte" viewBox="0 0 24 24"><path d="M8.308 2.914C10.876.027 15.128-.819 18.624.848c4.644 2.21 6.339 7.846 3.809 12.194l-5.687 9.77c-.319.547-.842.944-1.455 1.107-.613.163-1.267.079-1.818-.236l6.887-11.832c1.835-3.155.608-7.243-2.758-8.854-2.528-1.208-5.613-.604-7.482 1.473-1.031 1.139-1.608 2.613-1.628 4.145-.018 1.532.524 3.019 1.524 4.185.179.21.372.406.579.588l-4.021 6.919c-.157.273-.365.51-.617.699-.249.189-.534.329-.838.411-.303.081-.621.1-.93.061-.313-.041-.614-.143-.885-.298l4.364-7.513C7.041 12.77 6.59 11.763 6.34 10.7l-2.675 4.612c-.317.545-.842.944-1.453 1.107-.615.164-1.269.079-1.818-.237L7.31 4.284c.29-.487.622-.948.998-1.37Zm7.983 3.784c1.666.956 2.242 3.081 1.277 4.734L10.936 22.81c-.317.547-.84.945-1.455 1.109-.612.162-1.268.079-1.816-.237l6.159-10.596c-.495-.1-.96-.308-1.365-.61-.405-.3-.743-.682-.981-1.122-.242-.441-.385-.928-.418-1.428-.033-.501.045-1.002.224-1.47.18-.468.462-.893.824-1.242.362-.35.795-.618 1.273-.784.474-.168.982-.23 1.485-.183.502.046.989.2 1.425.451Zm-2.412 2.139c-.114.087-.21.196-.282.32-.106.186-.158.398-.144.613.014.215.092.42.224.592.13.167.31.297.515.367.207.068.427.077.636.02.209-.056.396-.172.54-.334.143-.161.234-.36.263-.574.027-.213-.008-.43-.105-.622-.097-.195-.246-.354-.433-.46-.126-.072-.263-.118-.406-.136-.143-.02-.286-.01-.424.026-.14.038-.271.101-.384.188Z"/></symbol>
+    <symbol id="i-databricks" viewBox="0 0 24 24"><path d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></symbol>
+    <symbol id="i-snowflake" viewBox="0 0 24 24"><path d="M24 3.459c0 .646-.418 1.18-1.141 1.18-.723 0-1.142-.534-1.142-1.18 0-.647.419-1.18 1.142-1.18.723 0 1.141.533 1.141 1.18zm-.228 0c0-.533-.38-.951-.913-.951s-.913.38-.913.95c0 .533.38.952.913.952.57 0 .913-.419.913-.951zm-1.37-.533h.495c.266 0 .456.152.456.38 0 .153-.076.229-.19.305l.19.266v.038h-.266l-.19-.266h-.229v.266h-.266zm.495.228h-.229v.267h.229c.114 0 .152-.038.152-.114.038-.077-.038-.153-.152-.153zM7.602 12.4c.038-.151.076-.304.076-.456 0-.114-.038-.228-.038-.342-.114-.343-.304-.647-.646-.838l-4.87-2.777c-.685-.38-1.56-.152-1.94.533-.381.685-.153 1.56.532 1.94l2.701 1.56-2.701 1.56c-.685.38-.913 1.256-.533 1.94.38.685 1.256.914 1.94.533l4.832-2.777c.343-.267.571-.533.647-.876zm1.332 2.626c-.266-.038-.57.038-.837.19l-4.832 2.777c-.685.38-.913 1.256-.532 1.94.38.686 1.255.914 1.94.533l2.701-1.56v3.12c0 .8.647 1.408 1.446 1.408.799 0 1.407-.647 1.407-1.408v-5.592c0-.761-.57-1.37-1.293-1.408zm4.946-6.088c.266.038.57-.038.837-.19l4.832-2.777c.685-.38.913-1.256.532-1.94-.38-.686-1.255-.914-1.94-.533l-2.701 1.56V1.975c0-.799-.647-1.408-1.446-1.408-.799 0-1.446.609-1.446 1.408V7.53c0 .76.609 1.37 1.332 1.407zM3.265 5.97l4.832 2.777c.266.152.533.19.837.19.723-.038 1.331-.684 1.331-1.407V1.975c0-.799-.646-1.408-1.407-1.408-.799 0-1.446.647-1.446 1.408v3.12l-2.701-1.56c-.685-.38-1.56-.152-1.94.533-.419.646-.19 1.521.494 1.902zm9.093 6.011a.412.412 0 00-.114-.266l-.57-.571a.346.346 0 00-.267-.114.412.412 0 00-.266.114l-.571.57a.411.411 0 00-.114.267c0 .076.038.19.114.267l.57.57a.345.345 0 00.267.114c.076 0 .19-.038.266-.114l.571-.57a.412.412 0 00.114-.267zm1.598.533L11.94 14.53c-.039.038-.153.114-.229.114h-.608a.411.411 0 01-.267-.114L8.82 12.514a.408.408 0 01-.076-.229v-.608c0-.076.038-.19.114-.267l2.016-2.016a.41.41 0 01.267-.114h.608a.41.41 0 01.267.114l2.016 2.016a.347.347 0 01.114.267v.608c-.076.077-.114.19-.19.229zm5.593 5.44l-4.832-2.777c-.266-.152-.57-.19-.837-.152-.723.038-1.332.684-1.332 1.408v5.554c0 .8.647 1.408 1.408 1.408.799 0 1.446-.647 1.446-1.408v-3.12l2.7 1.56c.686.38 1.561.152 1.941-.533.419-.646.19-1.521-.494-1.94zm2.549-7.533l-2.701 1.56 2.7 1.56c.686.38.914 1.256.533 1.94-.38.685-1.255.913-1.94.533l-4.832-2.778a1.644 1.644 0 01-.647-.798c-.037-.153-.076-.305-.076-.457 0-.114.039-.228.039-.342.114-.343.342-.647.646-.837l4.832-2.778c.685-.38 1.56-.152 1.94.533.457.609.19 1.484-.494 1.864"/></symbol>
+    <symbol id="i-svc-governance" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 1.6 3.5 4.7v6.5c0 5.2 3.6 9.9 8.5 11.2 4.9-1.3 8.5-6 8.5-11.2V4.7L12 1.6Zm0 2.13 6.5 2.37v5.1c0 4.02-2.66 7.72-6.5 8.93-3.84-1.21-6.5-4.91-6.5-8.93v-5.1L12 3.73Zm3.55 4.2-4.62 4.62-2.05-2.05-1.41 1.41 3.46 3.46 6.03-6.03-1.41-1.41Z" clip-rule="evenodd"/></symbol>
+    <symbol id="i-svc-warehouse" viewBox="0 0 24 24"><path d="M12 2 2 6.6 12 11.2 22 6.6 12 2ZM4.55 10.02 2 11.2l10 4.6 10-4.6-2.55-1.18L12 13.4l-7.45-3.38ZM4.55 14.62 2 15.8l10 4.6 10-4.6-2.55-1.18L12 18l-7.45-3.38Z"/></symbol>
+    <symbol id="i-svc-etl" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5.5 8.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm0 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM18.5 2a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm0 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm0 11a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm0 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM10.2 10.9l5.1-3.1 1.04 1.71-5.1 3.1zm1.04 1.59 5.1 3.1-1.04 1.71-5.1-3.1z" clip-rule="evenodd"/></symbol>
+    <symbol id="i-svc-analytics" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16v-2H5V3H3Zm5.7 11.3-1.4-1.4L11 9.2l3 3 4.3-4.3L19.7 9.3 14 15l-3-3-2.3 2.3Z"/></symbol>
+    <symbol id="i-svc-training" viewBox="0 0 24 24"><path d="M12 2 1 8l4 2.18V15c0 1.66 3.13 3 7 3s7-1.34 7-3v-4.82l2-1.09V15h2V7.5L12 2Zm4.9 6L12 10.67 7.1 8 12 5.33 16.9 8ZM12 16c-2.97 0-5-.99-5-1.5v-3.23l5 2.73 5-2.73v3.23c0 .51-2.03 1.5-5 1.5Z"/></symbol>
+    <symbol id="i-svc-automation" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.6 2h-3.2l-.42 2.53c-.62.2-1.2.47-1.73.8L5.9 3.9 3.9 5.9l1.43 2.35c-.33.53-.6 1.11-.8 1.73L2 10.4v3.2l2.53.42c.2.62.47 1.2.8 1.73L3.9 18.1l2 2 2.35-1.43c.53.33 1.11.6 1.73.8L10.4 22h3.2l.42-2.53c.62-.2 1.2-.47 1.73-.8L18.1 20.1l2-2-1.43-2.35c.33-.53.6-1.11.8-1.73L22 13.6v-3.2l-2.53-.42a7.6 7.6 0 0 0-.8-1.73L20.1 5.9l-2-2-2.35 1.43a7.6 7.6 0 0 0-1.73-.8L13.6 2ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" clip-rule="evenodd"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a class="nav-brand" href="#top">Bilel Hadef</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Career Timeline</a></li>
+        <li><a href="#education">Background</a></li>
+        <li><a href="#contact">Get In Touch</a></li>
+      </ul>
+      <ul class="nav-social">
+        <li>
+          <a href="https://linkedin.com/in/bilelbenhadef" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.25 8.25h4.5V24h-4.5V8.25ZM8.5 8.25h4.31v2.15h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-7.6c0-1.81-.03-4.14-2.52-4.14-2.53 0-2.92 1.97-2.92 4.01V24H8.5V8.25Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/benhadef" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58l-.01-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22l-.01 3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+        </li>
+        <li class="nav-social__extra">
+          <a href="mailto:bilel.benhadef@outlook.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm10 8.7L3.6 6H20.4L12 12.7ZM3 8.3V18h18V8.3l-8.4 6.7a1 1 0 0 1-1.2 0L3 8.3Z"/></svg>
+          </a>
+        </li>
+        <li class="nav-social__extra">
+          <a href="tel:+32487252149" aria-label="Phone" title="Phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V21a1 1 0 0 1-1 1A18 18 0 0 1 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1L6.6 10.8Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-14a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4.9 4.9a1 1 0 0 1 1.4 0l.7.7a1 1 0 0 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4Zm12 12a1 1 0 0 1 1.4 0l.7.7a1 1 0 0 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4ZM3 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm16 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1ZM6.3 17.7a1 1 0 0 1 0 1.4l-.7.7a1 1 0 0 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0Zm12-12a1 1 0 0 1 0 1.4l-.7.7a1 1 0 1 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0Z"/></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.3 22a10 10 0 0 1-2.3-19.73 1 1 0 0 1 1.12 1.45A8 8 0 0 0 20.28 14.9a1 1 0 0 1 1.32 1.23A10 10 0 0 1 12.3 22Z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker">Business Intelligence &amp; Analytics Consultant</p>
+        <h1>Bilel Hadef</h1>
+        <p class="intro">
+          Specialised in the Microsoft data stack, I help organisations optimise their
+          data platform: one source of truth, clear governance and ownership, and
+          analytics dependable enough to base real decisions on.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/photo.jpg" alt="Portrait of Bilel Hadef" />
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <p class="kicker">Who I am</p>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-body">
+        <div>
+          <p>
+            I'm a BI &amp; Data Analytics Engineer with 5+ years of experience building
+            end-to-end data and analytics solutions using the Microsoft ecosystem,
+            including Power BI, Microsoft Fabric, and Azure, alongside tools such as dbt,
+            Airflow, Terraform, and Azure DevOps.
+          </p>
+          <p>
+            I take a pragmatic, business-first approach to technology: before designing a
+            solution, I make sure I understand the problem we're actually trying to solve.
+            From optimizing ETL processes and modernizing data warehouses to
+            improving platform governance and solving performance issues, I enjoy
+            turning complex data challenges into solutions that are reliable, scalable,
+            and useful to the business.
+          </p>
+          <p>
+            I'm comfortable working across the full data lifecycle, from architecture
+            and engineering to analytics and BI, and while I enjoy collaborating and
+            advising, I'm at my best when I can get hands-on and build things myself. My
+            goal is simple: use technology to solve real business problems and create
+            measurable value.
+          </p>
+          <div class="about-langs">
+            <p class="about-langs__label">Languages</p>
+            <ul class="langs">
+              <li class="lang">
+                <span class="lang__name">English</span>
+                <span class="lang__level">Full Professional</span>
+              </li>
+              <li class="lang">
+                <span class="lang__name">French</span>
+                <span class="lang__level">Professional working</span>
+              </li>
+              <li class="lang">
+                <span class="lang__name">Dutch</span>
+                <span class="lang__level">Elementary</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <p class="kicker">What I do</p>
+        <h2>Services</h2>
+      </div>
+      <div class="services-grid">
+        <article class="service">
+          <svg class="service__icon" aria-hidden="true"><use href="#i-svc-warehouse"/></svg>
+          <h3>Data Warehousing &amp; Modeling</h3>
+          <p>
+            Data warehouses built on the Medallion architecture and Kimball dimensional
+            modeling in SQL Server, including migrations from SAP HANA and other source
+            systems.
+          </p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" aria-hidden="true"><use href="#i-svc-etl"/></svg>
+          <h3>ETL &amp; Orchestration</h3>
+          <p>
+            Reliable data pipelines orchestrated with Airflow DAGs, transformations in
+            dbt, Python and PySpark, and infrastructure managed with Terraform.
+          </p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" aria-hidden="true"><use href="#i-svc-analytics"/></svg>
+          <h3>Analytics &amp; Reporting</h3>
+          <p>
+            Power BI reports and dashboards &mdash; from sales and finance reporting to
+            usage monitoring and governance auditing &mdash; that give stakeholders
+            answers fast.
+          </p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" aria-hidden="true"><use href="#i-svc-governance"/></svg>
+          <h3>Data Platform Governance</h3>
+          <p>
+            Governance frameworks for Microsoft Fabric and Power BI &mdash; standards,
+            access control, workspace and lifecycle management, plus capacity
+            optimization to keep costs under control.
+          </p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" aria-hidden="true"><use href="#i-svc-automation"/></svg>
+          <h3>Automation</h3>
+          <p>
+            PowerShell and Power BI REST API automation, plus Power Apps
+            solutions to remove manual, repetitive work.
+          </p>
+        </article>
+        <article class="service">
+          <svg class="service__icon" aria-hidden="true"><use href="#i-svc-training"/></svg>
+          <h3>Training &amp; Enablement</h3>
+          <p>
+            Hands-on Power BI training sessions that raise data visualization and
+            analytics skills across teams.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="section-head">
+        <p class="kicker">Tech I Work With</p>
+        <h2>Tech Stack</h2>
+      </div>
+
+      <div class="stack-filters" role="group" aria-label="Filter technologies by category">
+        <button type="button" class="stack-filter is-active" aria-pressed="true" data-filter="all">All</button>
+        <button type="button" class="stack-filter" aria-pressed="false" data-filter="cloud">Cloud &amp; Platforms</button>
+        <button type="button" class="stack-filter" aria-pressed="false" data-filter="bi">BI &amp; Visualization</button>
+        <button type="button" class="stack-filter" aria-pressed="false" data-filter="data">Data Engineering</button>
+        <button type="button" class="stack-filter" aria-pressed="false" data-filter="devops">DevOps &amp; Automation</button>
+      </div>
+
+      <ul class="stack-grid" id="stack-grid">
+        <li class="tech" data-cat="cloud"><svg class="tech__icon" aria-hidden="true"><use href="#i-fabric"/></svg><span>Microsoft Fabric</span></li>
+        <li class="tech" data-cat="cloud"><svg class="tech__icon" aria-hidden="true"><use href="#i-azure"/></svg><span>Microsoft Azure</span></li>
+        <li class="tech" data-cat="cloud"><svg class="tech__icon" aria-hidden="true"><use href="#i-databricks"/></svg><span>Databricks</span></li>
+        <li class="tech" data-cat="cloud"><svg class="tech__icon" aria-hidden="true"><use href="#i-snowflake"/></svg><span>Snowflake</span></li>
+        <li class="tech" data-cat="bi"><svg class="tech__icon" aria-hidden="true"><use href="#i-powerbi"/></svg><span>Power BI</span></li>
+        <li class="tech" data-cat="data"><svg class="tech__icon" aria-hidden="true"><use href="#i-sql"/></svg><span>SQL</span></li>
+        <li class="tech" data-cat="data"><svg class="tech__icon" aria-hidden="true"><use href="#i-python"/></svg><span>Python</span></li>
+        <li class="tech" data-cat="data"><svg class="tech__icon" aria-hidden="true"><use href="#i-spark"/></svg><span>PySpark</span></li>
+        <li class="tech" data-cat="data"><svg class="tech__icon" aria-hidden="true"><use href="#i-dbt"/></svg><span>dbt</span></li>
+        <li class="tech" data-cat="data"><svg class="tech__icon" aria-hidden="true"><use href="#i-airflow"/></svg><span>Airflow</span></li>
+        <li class="tech" data-cat="data"><svg class="tech__icon" aria-hidden="true"><use href="#i-airbyte"/></svg><span>Airbyte</span></li>
+        <li class="tech" data-cat="devops"><svg class="tech__icon" aria-hidden="true"><use href="#i-git"/></svg><span>git</span></li>
+        <li class="tech" data-cat="devops"><svg class="tech__icon" aria-hidden="true"><use href="#i-azuredevops"/></svg><span>Azure DevOps</span></li>
+        <li class="tech" data-cat="devops"><svg class="tech__icon" aria-hidden="true"><use href="#i-terraform"/></svg><span>Terraform</span></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <p class="kicker">On the side</p>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-grid">
+        <article class="card">
+          <p class="card__meta">Personal project</p>
+          <h3>Fabric Infrastructure as Code</h3>
+          <p>
+            Terraform modules that provision Microsoft Fabric workspaces, items, and
+            access as code instead of manual portal setup, so environments stay
+            consistent, access is auditable, and every change is reviewed and version
+            controlled.
+          </p>
+          <p class="card__tags">Terraform · Microsoft Fabric · IaC · DevOps</p>
+        </article>
+        <article class="card">
+          <p class="card__meta">Personal project</p>
+          <h3>Project title</h3>
+          <p>
+            One or two sentences on what it does, the problem it solves, and what you
+            built. Add a link to the repo or a live demo.
+          </p>
+          <p class="card__tags">Tech · Tech · Tech</p>
+        </article>
+        <article class="card">
+          <p class="card__meta">Personal project</p>
+          <h3>Project title</h3>
+          <p>
+            One or two sentences on what it does, the problem it solves, and what you
+            built. Add a link to the repo or a live demo.
+          </p>
+          <p class="card__tags">Tech · Tech · Tech</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section">
+      <div class="section-head">
+        <p class="kicker">Selected work</p>
+        <h2>Career Timeline</h2>
+      </div>
+      <ol class="career-timeline">
+        <li class="career-timeline__item">
+          <p class="career-timeline__date">Sep 2026 &ndash; Present</p>
+          <h3>Data Analytics Consultant <span class="career-timeline__org">&mdash; EpicData, Cronos Group</span></h3>
+          <p class="career-timeline__clients">Client: Yonderland (Belgium)</p>
+          <ul class="career-timeline__highlights">
+            <li><strong>Yonderland</strong> &mdash; Redesigned the data lakehouse on Snowflake and built reusable semantic models with 20 KPIs for self-service reporting, as a member of the Power BI Center of Excellence.</li>
+          </ul>
+          <p class="card__tags">Snowflake · Semantic Modeling · Power BI</p>
+        </li>
+        <li class="career-timeline__item">
+          <p class="career-timeline__date">Feb 2024 &ndash; Sep 2026</p>
+          <h3>Data Analytics Consultant <span class="career-timeline__org">&mdash; Lytix, Intellus Group</span></h3>
+          <p class="career-timeline__clients">Clients: Maxeda Group, Infrabel, Service Public Régional de Bruxelles (Belgium)</p>
+          <ul class="career-timeline__highlights">
+            <li><strong>Maxeda Group</strong> &mdash; Fabric governance framework across 40 workspaces and 100+ users, cutting capacity use by 25%.</li>
+            <li><strong>Infrabel</strong> &mdash; 2 Medallion/Kimball data warehouses, 5 Airflow DAGs, 10 Power BI reports, and training for 30 employees.</li>
+            <li><strong>Service Public Régional de Bruxelles</strong> &mdash; Power BI workspace structure and an automated finance report.</li>
+          </ul>
+          <p class="card__tags">Microsoft Fabric · Power BI · Airflow · SQL Server · Governance</p>
+        </li>
+        <li class="career-timeline__item">
+          <p class="career-timeline__date">Nov 2021 &ndash; Feb 2024</p>
+          <h3>Power BI Consultant <span class="career-timeline__org">&mdash; Tillit</span></h3>
+          <p class="career-timeline__clients">Clients: Edmac (Belgium), Chicago Pneumatic (USA), Atlas Copco (USA)</p>
+          <ul class="career-timeline__highlights">
+            <li><strong>Edmac</strong> &mdash; Unified SQL Server data warehouse and 3 Power BI sales reports across China, the US, and Belgium with row-level security.</li>
+            <li><strong>Chicago Pneumatic</strong> &mdash; Power BI sales report for faster, data-driven decisions.</li>
+            <li><strong>Atlas Copco</strong> &mdash; PowerShell/REST API governance reporting across 40+ workspaces and migration of 20 Power Platform solutions.</li>
+          </ul>
+          <p class="card__tags">Power BI · PowerShell · SQL Server · REST API · RLS</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-head">
+        <p class="kicker">Background</p>
+        <h2>Education &amp; Certifications</h2>
+      </div>
+      <div class="background-columns">
+        <div>
+          <h3 class="background-heading">Education</h3>
+          <ul class="compact-list">
+            <li>
+              <span class="compact-list__date">Sep 2019 &ndash; Jun 2021</span>
+              <p>Master in Information Management <span class="career-timeline__org">&mdash; KU Leuven, Belgium</span></p>
+            </li>
+            <li>
+              <span class="compact-list__date">Oct 2015 &ndash; Sep 2019</span>
+              <p>BSc in Electrical Engineering &amp; Information Technology <span class="career-timeline__org">&mdash; KIT, Germany</span></p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="background-heading">Certifications</h3>
+          <ul class="tag-list">
+            <li>DP-600 &middot; Fabric Analytics Engineer Associate &middot; 2024</li>
+            <li>DP-500 &middot; Azure Enterprise Data Analyst Associate &middot; 2023</li>
+            <li>PL-300 &middot; Power BI Data Analyst &middot; 2022</li>
+            <li>PL-100 &middot; Power Platform App Maker &middot; 2022</li>
+            <li>DP-900 &middot; Azure Data Fundamentals &middot; 2022</li>
+            <li>PL-900 &middot; Power Platform Fundamentals &middot; 2021</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <p class="kicker">Say hello</p>
+        <h2>Get In Touch</h2>
+      </div>
+      <p class="section-lead">
+        Open to freelance assignments and collaborations. Reach me through any of
+        the channels below &mdash; email, phone, or LinkedIn &mdash; and I'll get
+        back to you shortly.
+      </p>
+      <ul class="contact-grid">
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:bilel.benhadef@outlook.com">bilel.benhadef@outlook.com</a>
+        </li>
+        <li>
+          <span class="contact-label">Phone</span>
+          <a href="tel:+32487252149">+32 487 25 21 49</a>
+        </li>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/bilelbenhadef">/in/bilelbenhadef</a>
+        </li>
+        <li>
+          <span class="contact-label">Location</span>
+          <span>Herent, Belgium</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bilel Hadef</p>
+    <p>Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
